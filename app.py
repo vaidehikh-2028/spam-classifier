@@ -18,7 +18,9 @@ tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
 
 def transform_text(text):
     text = text.lower()
-    text = nltk.word_tokenize(text)
+    from nltk.tokenize import wordpunct_tokenize
+
+text = wordpunct_tokenize(text)
 
     y = []
 
